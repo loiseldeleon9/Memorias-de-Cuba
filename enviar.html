@@ -1,0 +1,178 @@
+o"}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Enviar Testimonio - Memorias de Cuba</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+margin:0;
+color:white;
+}
+
+.navbar{
+background:#111;
+padding:15px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:16px;
+}
+
+.header{
+text-align:center;
+padding:20px;
+}
+
+.container{
+width:500px;
+margin:40px auto;
+background:white;
+color:black;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 10px 25px rgba(0,0,0,0.4);
+}
+
+input, textarea, select{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+background:#0077ff;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0055cc;
+}
+
+footer{
+text-align:center;
+padding:25px;
+margin-top:50px;
+color:white;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<a href="index.html">Inicio</a>
+<a href="enviar.html">Enviar Testimonios</a>
+<a href="archivo.html">Archivo</a>
+
+</div>
+
+<div class="header">
+
+<h1>Memorias de Cuba</h1>
+
+<p>Archivo de testimonios para preservar la memoria histórica.</p>
+
+</div>
+
+<div class="container">
+
+<h2>Enviar testimonio</h2>
+
+<form name="testimonios" method="POST" data-netlify="true" action="gracias.html">
+
+<input type="hidden" name="form-name" value="testimonios">
+
+<label>Fecha del evento</label>
+<input type="date" name="fecha">
+
+<label>Correo electrónico (no será publicado)</label>
+
+<input type="email" name="correo" required placeholder="ejemplo@email.com">
+
+<small style="color:#555;">
+Este correo no será publicado. Solo se utilizará para notificarle si su testimonio
+es aceptado o rechazado por el equipo de Memorias de Cuba.
+</small>
+
+<label>Provincia</label>
+<select id="provincia" name="provincia">
+
+<option value="">Seleccione provincia</option>
+
+<option>Pinar del Río</option>
+<option>Artemisa</option>
+<option>La Habana</option>
+<option>Mayabeque</option>
+<option>Matanzas</option>
+<option>Cienfuegos</option>
+<option>Villa Clara</option>
+<option>Sancti Spíritus</option>
+<option>Ciego de Ávila</option>
+<option>Camagüey</option>
+<option>Las Tunas</option>
+<option>Holguín</option>
+<option>Granma</option>
+<option>Santiago de Cuba</option>
+<option>Guantánamo</option>
+<option>Isla de la Juventud</option>
+
+</select>
+
+<label>Municipio</label>
+<select id="municipio" name="municipio">
+
+<option value="">Primero seleccione provincia</option>
+
+</select>
+
+<label>Pueblo o asentamiento</label>
+<input type="text" name="pueblo" placeholder="Ej: Aguacate, Zulueta, Cueto">
+
+<label>Descripción</label>
+<textarea name="descripcion" rows="5"></textarea>
+
+<label>Subir evidencia</label>
+<input type="file" name="archivo">
+
+<button type="submit">Enviar testimonio</button>
+
+</form>
+
+</div>
+
+<footer>
+
+Memorias de Cuba © 2026  
+<br><br>
+Creado por Loisel De Leon Morales
+
+</footer>
+
+<script src="municipios.js"></script>
+
+</body>
+</ht
