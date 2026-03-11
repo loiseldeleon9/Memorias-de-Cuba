@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Memorias de Cuba</title>
+
+<!-- Netlify Identity -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+margin:0;
+color:white;
+}
+
+.navbar{
+background:#111;
+padding:15px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:16px;
+}
+
+.navbar a:hover{
+text-decoration:underline;
+}
+
+.header{
+text-align:center;
+padding:40px 20px;
+}
+
+.flag{
+width:150px;
+margin:20px auto;
+display:block;
+}
+
+.container{
+width:700px;
+margin:40px auto;
+text-align:center;
+line-height:1.6;
+font-size:18px;
+}
+
+footer{
+text-align:center;
+padding:25px;
+margin-top:80px;
+color:white;
+font-size:14px;
+}
+
+@media (max-width:800px){
+.container{
+width:90%;
+font-size:16px;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<a href="index.html">Inicio</a>
+<a href="enviar.html">Enviar Testimonios</a>
+<a href="archivo.html">Archivo</a>
+
+</div>
+
+<div class="header">
+
+<h1>Memorias de Cuba</h1>
+
+<p>Archivo de testimonios para preservar la memoria histórica.</p>
+
+</div>
+
+<img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Flag_of_Cuba.svg">
+
+<div class="container">
+
+<p>
+Memorias de Cuba es un proyecto dedicado a preservar las experiencias y testimonios
+de los cubanos dentro y fuera de la isla. Nuestro objetivo es crear un archivo
+histórico donde las personas puedan compartir eventos, vivencias y situaciones
+que forman parte de la historia reciente del país.
+</p>
+
+<p>
+Cada testimonio enviado ayuda a construir una memoria colectiva que permitirá
+a futuras generaciones entender mejor la realidad vivida por el pueblo cubano.
+</p>
+
+<p>
+Si deseas contribuir puedes hacerlo en la sección
+<strong>Enviar Testimonio</strong>.
+</p>
+
+</div>
+
+<footer>
+
+Memorias de Cuba © 2026  
+<br><br>
+Creado por Loisel De Leon Morales
+
+</footer>
+
+<script>
+
+if (window.netlifyIdentity) {
+
+window.netlifyIdentity.on("init", user => {
+
+if (!user) {
+
+window.netlifyIdentity.on("login", () => {
+document.location.href = "/admin/panel.html";
+});
+
+}
+
+});
+
+window.netlifyIdentity.init();
+
+}
+
+</script>
+
+</body>
+</html>

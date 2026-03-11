@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Panel Administrador - Memorias de Cuba</title>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<style>
+
+body{
+font-family: Arial;
+background:#1c1c1c;
+margin:0;
+color:white;
+}
+
+.header{
+background:#111;
+padding:20px;
+text-align:center;
+}
+
+.container{
+width:900px;
+margin:40px auto;
+}
+
+.card{
+background:#2a2a2a;
+padding:20px;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+button{
+padding:10px 15px;
+border:none;
+border-radius:5px;
+margin-right:10px;
+cursor:pointer;
+}
+
+.publicar{
+background:#2ecc71;
+color:white;
+}
+
+.rechazar{
+background:#e74c3c;
+color:white;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#aaa;
+}
+
+.logout{
+background:#555;
+color:white;
+float:right;
+margin-top:-40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>Panel de Administración</h1>
+<p>Memorias de Cuba</p>
+
+<button class="logout" onclick="logout()">Cerrar sesión</button>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h3>Testimonio #001</h3>
+
+<p><strong>Fecha:</strong> 2026-03-10</p>
+<p><strong>Provincia:</strong> Holguín</p>
+<p><strong>Municipio:</strong> Banes</p>
+
+<p><strong>Descripción:</strong></p>
+
+<p>
+Durante varias semanas los apagones han durado más de 12 horas
+afectando a miles de familias.
+</p>
+
+<button class="publicar">Publicar</button>
+<button class="rechazar">Rechazar</button>
+
+</div>
+
+<div class="card">
+
+<h3>Testimonio #002</h3>
+
+<p><strong>Fecha:</strong> 2026-03-11</p>
+<p><strong>Provincia:</strong> Matanzas</p>
+<p><strong>Municipio:</strong> Cárdenas</p>
+
+<p><strong>Descripción:</strong></p>
+
+<p>
+Falta de alimentos básicos en los mercados y largas colas para comprar comida.
+</p>
+
+<button class="publicar">Publicar</button>
+<button class="rechazar">Rechazar</button>
+
+</div>
+
+</div>
+
+<footer>
+
+Panel de Moderación  
+Memorias de Cuba © 2026
+
+</footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+if (window.netlifyIdentity) {
+
+netlifyIdentity.on("init", user => {
+
+if (!user) {
+window.location.href = "/admin/login.html";
+}
+
+});
+
+}
+
+});
+
+function logout(){
+netlifyIdentity.logout();
+window.location.href="/admin/login.html";
+}
+
+</script>
+
+</body>
+</html>

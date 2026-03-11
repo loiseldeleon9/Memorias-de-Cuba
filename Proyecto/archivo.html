@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Archivo de Testimonios - Memorias de Cuba</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+margin:0;
+color:white;
+}
+
+.navbar{
+background:#111;
+padding:15px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:16px;
+}
+
+.header{
+text-align:center;
+padding:20px;
+}
+
+.container{
+width:800px;
+margin:40px auto;
+}
+
+.testimonio{
+background:white;
+color:black;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0px 5px 15px rgba(0,0,0,0.4);
+}
+
+#buscador{
+width:60%;
+padding:10px;
+margin:20px auto;
+display:block;
+border-radius:5px;
+border:none;
+font-size:16px;
+}
+
+footer{
+text-align:center;
+padding:25px;
+margin-top:50px;
+color:white;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<a href="index.html">Inicio</a>
+<a href="enviar.html">Enviar Testimonios</a>
+<a href="archivo.html">Archivo</a>
+
+</div>
+
+<div class="header">
+
+<h1>Archivo de Testimonios</h1>
+
+<p>Explora los testimonios recopilados en Memorias de Cuba.</p>
+
+</div>
+
+<input type="text" id="buscador" placeholder="Buscar por palabra, provincia o municipio..." onkeyup="buscarTestimonios()">
+
+<div class="container">
+
+<div class="testimonio">
+
+<h3>Apagones constantes en Holguín</h3>
+
+<p><strong>Fecha:</strong> 2026-03-10</p>
+<p><strong>Provincia:</strong> Holguín</p>
+<p><strong>Municipio:</strong> Holguín</p>
+<p><strong>Pueblo:</strong> Reparto Piedra Blanca</p>
+
+<p>
+Durante varias semanas los apagones han durado más de 12 horas diarias,
+afectando a miles de familias.
+</p>
+
+</div>
+
+
+<div class="testimonio">
+
+<h3>Escasez de alimentos en Matanzas</h3>
+
+<p><strong>Fecha:</strong> 2026-02-15</p>
+<p><strong>Provincia:</strong> Matanzas</p>
+<p><strong>Municipio:</strong> Cárdenas</p>
+<p><strong>Pueblo:</strong> Versalles</p>
+
+<p>
+En los mercados no se encuentran productos básicos y las personas
+deben hacer largas colas para conseguir comida.
+</p>
+
+</div>
+
+
+<div class="testimonio">
+
+<h3>Problemas con hospitales</h3>
+
+<p><strong>Fecha:</strong> 2026-01-20</p>
+<p><strong>Provincia:</strong> La Habana</p>
+<p><strong>Municipio:</strong> Centro Habana</p>
+<p><strong>Pueblo:</strong> Barrio Colón</p>
+
+<p>
+Los hospitales carecen de medicamentos y equipos médicos esenciales.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+Memorias de Cuba © 2026  
+<br><br>
+Creado por Loisel De Leon Morales
+
+</footer>
+
+<script>
+
+function buscarTestimonios(){
+
+let input = document.getElementById("buscador").value.toLowerCase();
+
+let testimonios = document.getElementsByClassName("testimonio");
+
+for(let i=0;i<testimonios.length;i++){
+
+let texto = testimonios[i].innerText.toLowerCase();
+
+if(texto.includes(input)){
+
+testimonios[i].style.display="block";
+
+}else{
+
+testimonios[i].style.display="none";
+
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
